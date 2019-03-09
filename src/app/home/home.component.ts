@@ -1,55 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { BlogService } from '../blog.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
- public allBlogs =[
-   {
-     "blogId":"1",
-     "lastModified":"2018-10-19T11:19:47.854Z",
-     "created":"2018-10-19T11:19:47.854Z",
-     "tags":[],
-     "author":"Admin",
-     "category":"Comedy",
-     "isPublished": true,
-     "views":0,
-     "bodyHtml":"This is the body of blog 1",
-     "description":"This is the description of blog 1",
-     "title":"This is blog 1"
-   },
-   {
-    "blogId":"2",
-    "lastModified":"2018-10-19T11:19:47.854Z",
-    "created":"2018-10-19T11:19:47.854Z",
-    "tags":[],
-    "author":"Admin",
-    "category":"Comedy",
-    "isPublished": true,
-    "views":0,
-    "bodyHtml":"This is the body of blog 2",
-    "description":"This is the description of blog 2",
-    "title":"This is blog 2"
-  },
-  {
-    "blogId":"3",
-    "lastModified":"2018-10-19T11:19:47.854Z",
-    "created":"2018-10-19T11:19:47.854Z",
-    "tags":[],
-    "author":"Admin",
-    "category":"Comedy",
-    "isPublished": true,
-    "views":0,
-    "bodyHtml":"This is the body of blog 3",
-    "description":"This is the description of blog 3",
-    "title":"This is blog 3"
-  }
- ]
-  constructor() { }
+export class HomeComponent implements OnInit, OnDestroy {
+
+ public allBlogs;
+
+  constructor(public blogService:BlogService) {
+
+    console.log("Home constructor is called")
+   }
 
   ngOnInit() {
+    console.log("Home init is called")
+    this.allBlogs = this.blogService.getAllBlogs(); 
+    console.log(this.allBlogs)
+
+  }
+
+  ngOnDestroy() {
+    console.log("Home Destroy is called")
   }
 
 }
