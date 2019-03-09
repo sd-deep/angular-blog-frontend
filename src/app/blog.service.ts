@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class BlogService {
   
   
+  public currentBlog;
   
   public allBlogs =[
     {
