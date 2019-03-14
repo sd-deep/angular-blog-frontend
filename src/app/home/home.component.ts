@@ -37,9 +37,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     )
     console.log(this.allBlogs)
 
-
-
-
   }
 
   ngOnDestroy() {
