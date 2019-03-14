@@ -2,7 +2,7 @@
   <h3>Create your blog</h3>
   <div class="row" style="text-align:left">
     <div class="col-md-12">
-      <form #createBlogForm="ngForm" (ngSubmit)="editThisBlog()">
+      <form #createBlogForm="ngForm" (ngSubmit)="editThisBlog()" *ngIf="currentBlog">
 
         <div class="form-group">
 
