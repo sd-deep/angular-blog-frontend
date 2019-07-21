@@ -16,7 +16,7 @@ export class BlogHttpService {
 
   public baseUrl = "https://blogapp.edwisor.com/api/v1/blogs";
 
-  public authToken = "ZmVlMzliOTU1OWZjMDcxYjI1MmM2NjM4ZTRmZDYxZWFhZGRjNGU1OWMxMDc1YTg1OTA5MjhkYmQ3ODhkMWYyYmU0MWJkZmNmMWE4YTUyZTg1YzYzMWE3MGNlYzBmZTAwY2QzZmJmNTgyOGM4NDQ5YTRiMmUzZTcwZmM4MjQxOWVlNQ==";
+  public authToken = "M2Q5Y2Q3NTFmYzYyNWI1NDNmYzU2NTI2ZmJlODhiMGExNzExOWM2NDMzMzYyNTY3YWJiOWI1NjVlMDQ5NGFlYWJiYWRiMzRhNmE1NmYxODIxMjg2MzI0OTJlOGQ3MTcyZmFkNTk1NDZlOTcyZTJkNjM0Y2JkMWUyYWVlNjIyMzljZA==";
   constructor(public _http: HttpClient) {
 
     console.log("blog-http service constructor")
